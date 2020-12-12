@@ -1,6 +1,5 @@
 var totalOrders = 0;
 var totalSpent = 0;
-var totalItems = 0;
 var pulling = true;
 var page = 0;
 
@@ -16,7 +15,6 @@ function getStatistics() {
         if (order["status"] === "hoan_thanh") {
           let tpa = order["grand_total"];
           totalSpent += tpa;
-          totalItems += 1;
         }
       });
       page += 10;
@@ -27,11 +25,6 @@ function getStatistics() {
       } else {
         console.log(
           "%cTổng đơn hàng đã giao: " + "%c" + moneyFormat(totalItems),
-          "font-size: 30px;",
-          "font-size: 30px; color:red"
-        );
-        console.log(
-          "%cTổng sản phẩm đã đặt: " + "%c" + moneyFormat(totalOrders),
           "font-size: 30px;",
           "font-size: 30px; color:red"
         );
