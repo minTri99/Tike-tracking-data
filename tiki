@@ -24,7 +24,7 @@ function getStatistics() {
         getStatistics();
       } else {
         console.log(
-          "%cTổng đơn hàng đã giao: " + "%c" + moneyFormat(totalItems),
+          "%cTổng đơn hàng đã giao: " + "%c" + moneyFormat(totalOrders),
           "font-size: 30px;",
           "font-size: 30px; color:red"
         );
